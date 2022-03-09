@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-back-button defaultHref="/home"></ion-back-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Response GooLocation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-sm="6" offset-sm="3" padding class="ion-text-center">
+        <p>{{ pickLocation.address }}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-sm="3" offset-sm="3">
+        <p> 위도: {{ pickLocation.lat }}</p>
+      </ion-col>
+      <ion-col size-sm="3" offset-sm="3">
+        <p> 경도: {{ pickLocation.lng }}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-sm="6" offset-sm="3">
+        <ion-img role="button"
+                 (click)="onShowFullMap()"
+                 class="location-image"
+                 [src]="pickLocation.staticMapImgUrl"
+        ></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

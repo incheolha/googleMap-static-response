@@ -1,0 +1,31 @@
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-title>
+      Google Map Location Practice
+    </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="onCancel()">
+        <ion-label>cancel</ion-label>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row class="ion-text-center">
+      <ion-col size-sm="3" offset-sm="3">
+        <app-location-picker></app-location-picker>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row class="ion-text-center">
+      <ion-col size-sm="3" offset-sm="3">
+       <ion-button color="danger" (click)="onResponse()">
+         <ion-label>Response Location</ion-label>
+       </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
